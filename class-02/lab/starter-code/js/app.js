@@ -1,3 +1,7 @@
+
+
+// -------->     Wed OCT 30th RAN AND ELLEN     <--------
+
 function Horn(horn) {
   this.image_url = horn.image_url;
   this.title = horn.title;
@@ -32,14 +36,22 @@ Horn.prototype.render = function() {
   hornClone.find('img').attr('src', this.image_url);
   hornClone.find('p').text(this.description);
   hornClone.removeClass();  
-  hornClone.addClass(this.keyword);
+  hornClone.addClass('hornImages');
+  hornClone.attr('data-value', this.keyword);
+
+  $('select').append(`<option value=${this.keyword}>${this.keyword}</option>`);
 }
 
+$('select').on('change', function(){
+  let pickedThing = $(this).val()
+  $('div').hide();
+  $(`div[data-value=${pickedThing}`).show();
+})
 
 Horn.loadHorns = () =>{
   Horn.allHorns.forEach(horn => horn.render())
 }
-
+Horn.readJson();
 
 
 
