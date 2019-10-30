@@ -1,0 +1,70 @@
+@media (min-width:481px){
+    body{
+        margin: 0 auto;
+        height:768px;
+        width:960px;
+        text-align:center;
+    }
+    #a{
+        height:100px;
+        width:960px;
+    }
+    #b{
+        height:600px;
+        width:200px;
+        float:left;
+    }
+    #c{
+        height:200px;
+        width:380px;
+        float:left;
+    }
+    #d{
+        height:200px;
+        width:380px;
+        float:right;
+    }
+    #efgh{
+        height:250px;
+        width:760px;
+        float:right
+    }
+    .efgh{
+        float:right;
+        width:190px;
+    }
+    #i{
+        height:150px;
+        width:760px;
+        float:right;
+    }
+
+}
+@media (max-width:480px){
+    #a{
+        height:75px;
+     }
+    #b{
+        height:150px;
+    }
+    #c{
+        height:125px;
+    }
+    #d{
+        height:125px;
+    }
+    #efgh{
+        height:480px;
+    }
+    .efgh{
+        float:left;
+        width:49.9%;
+        height:49.9%;
+    }
+    #i{
+        height:125px;
+
+    }
+}
+
+
